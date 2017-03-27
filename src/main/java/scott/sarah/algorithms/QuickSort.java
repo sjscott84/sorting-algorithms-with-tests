@@ -7,13 +7,17 @@ public class QuickSort {
 		this.array = array;
 	}
 
-	//Quick Sort Methods (4 in total including a helper method swap)
 	public int[] quickSortSetup(int[] arrayToSort){
 		array = arrayToSort;
 		quickSort(0, arrayToSort.length - 1);
 		return array;
 	}
 	
+	/**
+	 * Recursively finds pivot point to call swap function on 
+	 * @param lowIndex
+	 * @param highIndex
+	 */
 	private void quickSort(int lowIndex, int highIndex){
 		if(lowIndex < highIndex){
 			int pivot = partition(lowIndex, highIndex);
@@ -40,7 +44,12 @@ public class QuickSort {
 		swap(pivot, highIndex);
 		return pivot;
 	}
-
+	
+	/**
+	 * Swaps two elements in array
+	 * @param first
+	 * @param second
+	 */
 	void swap(int first, int second){
 		int temp = array[first];
 		array[first] = array[second];
