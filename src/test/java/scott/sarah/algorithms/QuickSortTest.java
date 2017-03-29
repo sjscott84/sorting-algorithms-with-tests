@@ -40,12 +40,12 @@ public class QuickSortTest {
 	}
 	
 	@Test
-	public void returnedArrayShouldBeSortedNumerically() {
-		int[] array = {3,1,2};
+	public void quickSortSetupShouldReturnArraySortedNumerically() {
+		int[] array = {3,1,2, -10, 5, -2};
+		int[] expectedArray = {-10, -2, 1,2,3, 5};
 		QuickSort quickSort = new QuickSort(array);
-		int[] expectedArray = {1,2,3};
 		
-		int[] sortedArray = quickSort.quickSortSetup(array);
+		int[] sortedArray = quickSort.sort();
 		
 		assertArrayEquals(sortedArray, expectedArray);
 

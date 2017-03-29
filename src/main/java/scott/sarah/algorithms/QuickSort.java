@@ -2,14 +2,14 @@ package scott.sarah.algorithms;
 
 public class QuickSort {
 	
-	int [] array;
+	private int [] array;
+	
 	public QuickSort(int[] array) {
 		this.array = array;
 	}
 
-	public int[] quickSortSetup(int[] arrayToSort){
-		array = arrayToSort;
-		quickSort(0, arrayToSort.length - 1);
+	public int[] sort(){
+		quickSort(0, array.length - 1);
 		return array;
 	}
 	
