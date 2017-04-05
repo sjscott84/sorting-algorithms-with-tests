@@ -13,7 +13,7 @@ public class SelectionSortTest {
 		SelectionSort selectionSort = new SelectionSort(array);
 		int[] expectedArray = {1,2,3};
 		
-		int[] sortedArray = selectionSort.selectionSort();
+		int[] sortedArray = selectionSort.sort();
 		
 		assertArrayEquals(sortedArray, expectedArray);
 	}

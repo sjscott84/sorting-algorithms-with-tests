@@ -1,10 +1,18 @@
 package scott.sarah.algorithms;
 
-public class QuickSort {
+public class QuickSort implements Sort {
 	
 	private int [] array;
 	
+	public QuickSort(){
+		
+	}
+	
 	public QuickSort(int[] array) {
+		setArray(array);
+	}
+	
+	public void setArray(int[] array){
 		this.array = array;
 	}
 
@@ -18,7 +26,7 @@ public class QuickSort {
 	 * @param lowIndex
 	 * @param highIndex
 	 */
-	private void quickSort(int lowIndex, int highIndex){
+	public void quickSort(int lowIndex, int highIndex){
 		if(lowIndex < highIndex){
 			int pivot = partition(lowIndex, highIndex);
 			quickSort(lowIndex, pivot - 1);

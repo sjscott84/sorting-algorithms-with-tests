@@ -30,7 +30,7 @@ public class RandomQuickSortTest {
 	}
 	
 	@Test
-	public void quickSortSetupShouldReturnArraySortedNumerically() {
+	public void sortShouldReturnArraySortedNumerically() {
 		int[] array = {3,1,2, -10, 5, -2};
 		int[] expectedArray = {-10, -2, 1,2,3, 5};
 		RandomQuickSort randomQuickSort = new RandomQuickSort(array);

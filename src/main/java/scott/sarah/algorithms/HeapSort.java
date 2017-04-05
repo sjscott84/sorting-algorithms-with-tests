@@ -1,10 +1,17 @@
 package scott.sarah.algorithms;
 
-public class HeapSort {
+public class HeapSort implements Sort {
 	
 	int[] array;
 	
+	public HeapSort(){
+	}
+	
 	public HeapSort(int[] array){
+		setArray(array);
+	}
+	
+	public void setArray(int[] array){
 		this.array = array;
 	}
 	

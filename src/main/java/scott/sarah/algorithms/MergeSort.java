@@ -1,11 +1,19 @@
 package scott.sarah.algorithms;
 
-public class MergeSort {
+public class MergeSort implements Sort {
 	
 	private int[] array;
 	private int[] tempArray;
 	
 	public MergeSort(int[] array){
+		setArray(array);
+	}
+	
+	public MergeSort(){
+		
+	}
+	
+	public void setArray(int[] array){
 		this.array = array;
 		this.tempArray = new int[array.length];
 	}

@@ -1,12 +1,32 @@
 package scott.sarah.algorithms;
 
-public class RandomQuickSort extends QuickSort {
+public class RandomQuickSort implements Sort {
 	
 	int[] array;
 	
+	public RandomQuickSort(){
+		
+	}
+	
 	public RandomQuickSort(int[] array) {
-		super(array);
+		setArray(array);
+	}
+	
+	public void setArray(int[] array){
 		this.array = array;
+	}
+	
+	public int[] sort(){
+		quickSort(0, array.length - 1);
+		return array;
+	}
+	
+	public void quickSort(int lowIndex, int highIndex){
+		if(lowIndex < highIndex){
+			int pivot = partition(lowIndex, highIndex);
+			quickSort(lowIndex, pivot - 1);
+			quickSort(pivot + 1, highIndex);
+		}
 	}
 	
 	/**
@@ -25,6 +45,12 @@ public class RandomQuickSort extends QuickSort {
 		}
 		swap(highIndex, p);
 		return p;
+	}
+	
+	void swap(int first, int second){
+		int temp = array[first];
+		array[first] = array[second];
+		array[second] = temp;
 	}
 
 }

@@ -1,18 +1,25 @@
 package scott.sarah.algorithms;
 
-public class CountingSort {
+public class CountingSort  {
 	
 	int[] array;
 	int[] countArray;
 	int[] resultArray;
 	
+	public CountingSort(){	
+	}
+	
 	public CountingSort(int[] array, int highNumber){
+		setArray(array, highNumber);
+	}
+	
+	public void setArray(int[] array, int highNumber){
 		this.array = array;
 		this.countArray = new int[highNumber + 1];
 		this.resultArray = new int[array.length];
 	}
 
-	public int[] countingSort (){
+	public int[] sort (){
 		countArray = addZeroToCountArray(countArray);
 		
 		countArray = countHowManyValuesInArray(countArray);

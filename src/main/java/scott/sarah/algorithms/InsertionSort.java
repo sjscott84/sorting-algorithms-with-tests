@@ -1,14 +1,22 @@
 package scott.sarah.algorithms;
 
-public class InsertionSort {
+public class InsertionSort implements Sort {
 	
 	int[] array;
 	
+	public InsertionSort(){
+		
+	}
+	
 	public InsertionSort(int[] array){
+		setArray(array);
+	}
+	
+	public void setArray(int[] array){
 		this.array = array;
 	}
 	
-	int[] sort (){
+	public int[] sort(){
 		int current;
 		for(int i = 1; i < array.length; i++){
 			current = i;

@@ -46,7 +46,7 @@ public class CountingSortTest {
 		int[] expectedArray = {1,2,3,5};
 		CountingSort countingSort = new CountingSort(array, 5);
 		
-		int[] sortedArray = countingSort.countingSort();
+		int[] sortedArray = countingSort.sort();
 		
 		assertArrayEquals(sortedArray, expectedArray);
 
